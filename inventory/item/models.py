@@ -25,7 +25,7 @@ class Item(StatusMixin, TimeStampedModel):
     description = models.TextField(_('Description'), blank=True, null=True)
     brand = models.CharField(_('Brand'), max_length=100, blank=True, null=True)
     price = models.DecimalField(_('Price'), max_digits=10, decimal_places=2, blank=True, null=True, default=0.0)
-    count_in_stock = models.IntegerField(_('Count'), blank=True, null=True, default=0)
+    quantity = models.IntegerField(_('Count'), blank=True, null=True, default=0)
     category = models.ForeignKey('item.Category', on_delete=models.SET_NULL, blank=True, null=True,
                                  related_name='category_items')
     warehouse = models.ForeignKey('warehouse.Warehouse', on_delete=models.SET_NULL, blank=True, null=True,
