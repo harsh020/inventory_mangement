@@ -15,11 +15,13 @@
 ## Model
 
 - Item
+- Category
 - Warehouse
-- Seller
+- Address
 
 
 ## Relationship
 
 - Item (n is stored in 1) Warehouse 
-- Item (1 is sold by n) Sellers
+- Item (1 is sold by 1) Category
+- Warehouse (1 is located at 1) Address
