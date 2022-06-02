@@ -65,8 +65,7 @@ Internal APIs include:
 **Note**
 
 `${BASE_URL}`: The base url on which the django app can be reached.
-
-If Running locally, it is `http://localhost:8000`
+If running locally, it is `http://localhost:8000`
 
 ## Swagger Open API Specifications
   - url: `${BASE_URL}/`
