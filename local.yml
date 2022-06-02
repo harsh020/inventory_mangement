@@ -37,11 +37,11 @@ services:
     container_name: 'inventory'
     environment:
       <<: *postgres-variables
+      DJANGO_SECRET: 4e_6%p!pw4+tl@0htv84(neizx_$$uhwh@#5se&9^)k%w!xpmfj
+      DJANGO_DEBUG: 'true'
       DJANGO_SUPERUSER_USERNAME: admin
       DJANGO_SUPERUSER_PASSWORD: admin
       DJANGO_SUPERUSER_EMAIL: admin@example.com
-    env_file:
-      - .envs/.local/.django
     depends_on:
       - postgres
     ports:
