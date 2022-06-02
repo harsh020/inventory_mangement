@@ -1,0 +1,59 @@
+version: '3.9'
+
+x-postgres-variables: &postgres-variables
+  POSTGRES_HOST: postgres
+  POSTGRES_PORT: 5432
+  POSTGRES_DB: inventory
+  POSTGRES_USER: admin
+  POSTGRES_PASSWORD: admin
+
+services:
+  postgres:
+    image: 'postgres'
+    container_name: 'inventory_postgres'
+    environment:
+      <<: *postgres-variables
+    ports:
+      - '5432:5432'
+    networks:
+      - inventory_network
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  adminer:
+    image: 'adminer'
+    container_name: 'inventory_adminer'
+    depends_on:
+      - postgres
+    ports:
+      - '8080:8080'
+    networks:
+      - inventory_network
+
+  inventory:
+    build:
+      context: .
+      dockerfile: ./compose/local/Dockerfile
+    container_name: 'inventory'
+    environment:
+      <<: *postgres-variables
+      DJANGO_SUPERUSER_USERNAME: admin
+      DJANGO_SUPERUSER_PASSWORD: admin
+      DJANGO_SUPERUSER_EMAIL: admin@example.com
+    env_file:
+      - .envs/.local/.django
+    depends_on:
+      - postgres
+    ports:
+      - '8000:8000'
+    networks:
+      - inventory_network
+    volumes:
+      - .:/app
+
+networks:
+  inventory_network:
+    driver: bridge
+
+volumes:
+  pgdata:
