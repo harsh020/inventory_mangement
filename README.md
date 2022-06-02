@@ -18,14 +18,14 @@ Internal APIs include:
 
 
 ## Content
-1. [How to run](https://github.com/harsh020/inventory_mangement/new/master?readme=1#how-to-run)
-2. [E-R Diagram](https://github.com/harsh020/inventory_mangement/new/master?readme=1#e-r--diagram)
-3. [Swagger Open API Specification](https://github.com/harsh020/inventory_mangement/new/master?readme=1#swagger-open-api-specification)
-4. [Admin Panel](https://github.com/harsh020/inventory_mangement/new/master?readme=1#admin-panel)
-5. [APIs](https://github.com/harsh020/inventory_mangement/new/master?readme=1#apis)
-    - [Warehouse API](https://github.com/harsh020/inventory_mangement/new/master?readme=1#warehouse-api)
-    - [Item API](https://github.com/harsh020/inventory_mangement/new/master?readme=1#item-api)
-6. [How to use](https://github.com/harsh020/inventory_mangement/new/master?readme=1#how-to-use)
+1. [How to run](#how-to-run)
+2. [E-R Diagram](#e-r-diagram)
+3. [Swagger Open API Specification](#swagger-open-api-specifications)
+4. [Admin Panel](#admin-panel)
+5. [APIs](#apis)
+    - [Warehouse API](#warehouse-api)
+    - [Item API](#item-api)
+6. [How to use](#how-to-use)
 
 
 ## How to run
