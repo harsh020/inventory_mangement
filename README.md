@@ -16,6 +16,8 @@ Internal APIs include:
 
 **Find the low level design [here](https://github.com/harsh020/inventory_mangement/blob/master/design.md)**
 
+:exclamation:**To use replit deployment please refer [how to use guide](#how-to-use) and [replit guide](#replit-deployment-usage) first.**:exclamation:
+
 
 ## Content
 1. [How to run](#how-to-run)
@@ -26,6 +28,7 @@ Internal APIs include:
     - [Warehouse API](#warehouse-api)
     - [Item API](#item-api)
 6. [How to use](#how-to-use)
+7. [Replit Deployment: Usage](#replit-deployment-usage)
 
 
 ## How to run
@@ -76,10 +79,13 @@ The admin panel is provided by Django itself.
 
 ## APIs
 
+:exclamation::exclamation: **Note: Please click on `Create`, `Details`, `List`, `Update` and `Delete` in both APIs to expand details.** :exclamation::exclamation:
+
 ### Warehouse API
  **Note:** Please ensure you pass `id` for `city`, `state` and `country` in address. One can create them using the admin panel.
 
-  - #### Create:
+  - <details><summary> Create (Click me for details!) </summary>
+ 
     - **url:** `${BASE_URL}/warehouse/v1/create/`
     - **method:** `POST`
     - **data:**
@@ -134,8 +140,10 @@ The admin panel is provided by Django itself.
           }
       }'
       ```
+ </details>
       
-  - #### Details
+  - <details><summary> Details </summary>
+ 
     - **url:** `${BASE_URL}/warehouse/v1/{id}/`
     - **method:** `GET`
     - **url params:**
@@ -173,8 +181,10 @@ The admin panel is provided by Django itself.
       ```sh
       curl --location --request GET 'http://localhost:8000/warehouse/v1/1/'
       ```
+  </details>
       
-  - #### List
+  - <details><summary> List </summary>
+ 
     - **url:** `${BASE_URL}/warehouse/v1/list/`
     - **method:** `GET`
     - **response:**
@@ -208,8 +218,10 @@ The admin panel is provided by Django itself.
     ```sh
     curl --location --request GET 'http://localhost:8000/warehouse/v1/list/'
     ```
+  </details>
     
-  - #### Update
+  - <details><summary> Update </summary>
+ 
     - **url:** `${BASE_URL}/warehouse/v1/{id}/`
     - **method:** `PATCH`
     - **url params:**
@@ -264,8 +276,10 @@ The admin panel is provided by Django itself.
           }
       }'
       ```
+  </details>
       
-  - #### Delete
+  - <details><summary> Delete </summary>
+ 
     - **url:** `${BASE_URL}/warehouse/v1/{id}/`
     - **method:** `DELETE`
     - **url params:**
@@ -285,13 +299,15 @@ The admin panel is provided by Django itself.
       ```sh
       curl --location --request DELETE 'http://localhost:8000/warehouse/v1/1/delete/'
       ```
+  </details>
       
 ### Item API
  **Note:** Please ensure you pass `id` for `warehouse` in warehouse. One can create them using the above provided API.
  
  **Note:** Please ensure you pass `id` for `category` in category. One can create them using the admin panel.
  
-  - #### Create:
+  - <details><summary> Create </summary>
+ 
     - **url:** `${BASE_URL}/item/v1/create/`
     - **method:** `POST`
     - **data:**
@@ -364,8 +380,10 @@ The admin panel is provided by Django itself.
           "warehouse": 5
       }'
       ```
+  </details>
       
-  - #### Details
+  - <details><summary> Details </summary>
+ 
     - **url:** `${BASE_URL}/item/v1/{id}/`
     - **method:** `GET`
     - **url params:**
@@ -422,8 +440,10 @@ The admin panel is provided by Django itself.
       ```sh
       curl --location --request GET 'http://localhost:8000/item/v1/1/'
       ```
+  </details>
       
-  - #### List
+  - <details><summary> List </summary>
+ 
     - **url:** `${BASE_URL}/item/v1/list/`
     - **method:** `GET`
     - **response:**
@@ -476,8 +496,10 @@ The admin panel is provided by Django itself.
     ```sh
     curl --location --request GET 'http://localhost:8000/item/v1/list/'
     ```
+  </details>
     
-  - #### Update
+  - <details><summary> Update </summary>
+ 
     - **url:** `${BASE_URL}/item/v1/{id}/`
     - **method:** `PATCH`
     - **url params:**
@@ -545,8 +567,10 @@ The admin panel is provided by Django itself.
           "is_deleted": false
       }'
       ```
+  </details>
       
-  - #### Delete
+  - <details><summary> Delete </summary>
+ 
     - **url:** `${BASE_URL}/item/v1/{id}/`
     - **method:** `DELETE`
     - **url params:**
@@ -566,6 +590,7 @@ The admin panel is provided by Django itself.
       ```sh
       curl --location --request DELETE 'http://localhost:8000/item/v1/1/delete/'
       ```
+  </details>
 
 ## How to use
 
@@ -573,3 +598,103 @@ The admin panel is provided by Django itself.
 2. Create Country, then State and then City.
 3. Then create warehouse either using above mentioned APIs or using admin panel itself.
 4. Then create item either using above mentioned APIs or using admin panel itself.
+
+## Replit Deployment: Usage
+
+- The project is deployed at [inventorymanagement](https://inventorymangement.harsh020.repl.co/). In the landing page you will find the API speifications.
+- Admin panel can be accessed by appending `/admin/` to the end of replit deployment url. The username and password are `admin` and `admin` respectively.
+- A warehouse with `id=1` and and item with `id=1` are also created to use.
+- The following dummy data has already been created for further use:
+### Country
+<table>
+ <tr>
+  <th>Id</th>
+  <th>Name</th>
+ </tr>
+ 
+ <tr>
+  <td>1</td>
+  <td>India</td>
+ </tr>
+ 
+ <tr>
+  <td>2</td>
+  <td>United States</td>
+ </tr>
+ 
+ <tr>
+  <td>3</td>
+  <td>England</td>
+ </tr>
+ 
+ <tr>
+  <td>4</td>
+  <td>Germany</td>
+ </tr>
+</table>
+
+### State
+<table>
+ <tr>
+  <th>Id</th>
+  <th>Name</th>
+  <th>Country</th>
+ </tr>
+ 
+ <tr>
+  <td>1</td>
+  <td>Uttar Pradesh</td>
+  <td>1</td>
+ </tr>
+ 
+ <tr>
+  <td>2</td>
+  <td>California</td>
+  <td>2</td>
+ </tr>
+ 
+ <tr>
+  <td>3</td>
+  <td>Cambridge</td>
+  <td>3</td>
+ </tr>
+ 
+ <tr>
+  <td>4</td>
+  <td>Berlin</td>
+  <td>4</td>
+ </tr>
+</table>
+
+### City
+<table>
+ <tr>
+  <th>Id</th>
+  <th>Name</th>
+  <th>State</th>
+ </tr>
+ 
+ <tr>
+  <td>1</td>
+  <td>Lucknow</td>
+  <td>1</td>
+ </tr>
+ 
+ <tr>
+  <td>2</td>
+  <td>San Francisco</td>
+  <td>2</td>
+ </tr>
+ 
+ <tr>
+  <td>3</td>
+  <td>Duxford</td>
+  <td>3</td>
+ </tr>
+ 
+ <tr>
+  <td>4</td>
+  <td>Berlin</td>
+  <td>4</td>
+ </tr>
+</table>
