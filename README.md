@@ -5,6 +5,7 @@
 ![DB](https://img.shields.io/badge/db-postgres-brightgreen)
 ![Docker](https://img.shields.io/badge/docker-yes-brightgreen)
 ![Swagger UI](https://img.shields.io/badge/swagger_ui-yes-brightgreen)
+[![Deployment](https://img.shields.io/badge/deploy-replit-brightgreen)](https://inventorymangement.harsh020.repl.co/)
 
 A simple inventory management backend built using Django with CRUD APIs for Warehouse and Items.
 
@@ -14,9 +15,11 @@ Internal APIs include:
  - City
  - Address
 
-**Find the low level design [here](https://github.com/harsh020/inventory_mangement/blob/master/design.md)**
+Find the low level design [here](https://github.com/harsh020/inventory_mangement/blob/master/design.md).
 
 :exclamation:**To use replit deployment please refer [how to use guide](#how-to-use) and [replit guide](#replit-deployment-usage) first.**:exclamation:
+
+The application is deployed using [replit](https://inventorymangement.harsh020.repl.co/). (Hint: You can also use the above replit badge to access)
 
 
 ## Content
