@@ -604,6 +604,8 @@ The admin panel is provided by Django itself.
 
 ## Replit Deployment: Usage
 
+:exclamation::exclamation: **Note: The postgres is deployed in heroku using the free version. So please take care of data limit.** :exclamation::exclamation:
+
 - The project is deployed at [inventorymanagement](https://inventorymangement.harsh020.repl.co/). In the landing page you will find the API speifications.
 - Admin panel can be accessed by appending `/admin/` to the end of replit deployment url. The username and password are `admin` and `admin` respectively.
 - A warehouse with `id=1` and and item with `id=1` are also created to use.
@@ -700,4 +702,23 @@ The admin panel is provided by Django itself.
   <td>Berlin</td>
   <td>4</td>
  </tr>
+</table>
+
+### Category
+<table>
+ <tr>
+  <th>Id</th>
+  <th>Name</th>
+ </tr>
+ 
+ <tr>
+  <td>1</td>
+  <td>Electronic</td>
+ </tr>
+ 
+ <tr>
+  <td>2</td>
+  <td>Clothing</td>
+ </tr>
+ 
 </table>
