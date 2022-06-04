@@ -19,7 +19,7 @@ Find the low level design [here](https://github.com/harsh020/inventory_mangement
 
 :exclamation:**Before deploying on replit please refer [how to use guide](#how-to-use) and [replit guide](#replit-deployment-usage) first.**:exclamation:
 
-The application can deployed on replit using [this link](https://replit.com/@harsh020/inventorymangement/). (Hint: You can also use the above replit badge to access)
+The application can be deployed on replit using [this link](https://replit.com/@harsh020/inventorymangement/). (Hint: You can also use the above replit badge to access)
 
 
 ## Content
