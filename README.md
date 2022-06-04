@@ -5,7 +5,7 @@
 ![DB](https://img.shields.io/badge/db-postgres-brightgreen)
 ![Docker](https://img.shields.io/badge/docker-yes-brightgreen)
 ![Swagger UI](https://img.shields.io/badge/swagger_ui-yes-brightgreen)
-[![Deployment](https://img.shields.io/badge/deploy-replit-brightgreen)](https://inventorymangement.harsh020.repl.co/)
+[![Deployment](https://img.shields.io/badge/deploy-replit-brightgreen)](https://replit.com/@harsh020/inventorymangement/)
 
 A simple inventory management backend built using Django with CRUD APIs for Warehouse and Items.
 
@@ -17,9 +17,9 @@ Internal APIs include:
 
 Find the low level design [here](https://github.com/harsh020/inventory_mangement/blob/master/design.md).
 
-:exclamation:**To use replit deployment please refer [how to use guide](#how-to-use) and [replit guide](#replit-deployment-usage) first.**:exclamation:
+:exclamation:**Before deploying on replit please refer [how to use guide](#how-to-use) and [replit guide](#replit-deployment-usage) first.**:exclamation:
 
-The application is deployed using [replit](https://inventorymangement.harsh020.repl.co/). (Hint: You can also use the above replit badge to access)
+The application can deployed on replit using [this link](https://replit.com/@harsh020/inventorymangement/). (Hint: You can also use the above replit badge to access)
 
 
 ## Content
@@ -606,7 +606,7 @@ The admin panel is provided by Django itself.
 
 :exclamation::exclamation: **Note: The postgres is deployed in heroku using the free version. So please take care of data limit.** :exclamation::exclamation:
 
-- The project is deployed at [inventorymanagement](https://inventorymangement.harsh020.repl.co/). In the landing page you will find the API speifications.
+- The project can be deployed using [https://replit.com/@harsh020/inventorymangement/](https://replit.com/@harsh020/inventorymangement/). In the landing page you will find the API speifications.
 - Admin panel can be accessed by appending `/admin/` to the end of replit deployment url. The username and password are `admin` and `admin` respectively.
 - A warehouse with `id=1` and and item with `id=1` are also created to use.
 - The following dummy data has already been created for further use:
